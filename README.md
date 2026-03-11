@@ -5,31 +5,60 @@ While building this page, I explored how elements move and stack on the screen u
 
 ---
 
+## 📸 Demo
+
+
+![Demo](demo.gif)
+
+---
+
 ## 🚀 What I Learned
 
 This project helped me gain hands-on experience with:
 
-- **CSS Position Property**
-  - `static`
-  - `relative`
-  - `absolute`
-  - `fixed`
-  - `sticky`
+- **CSS Position Property** — `static`, `relative`, `absolute`, `fixed`, `sticky`
+- **Z-Index & Stacking Context** — how elements overlap and common z-index mistakes
+- **Parallax / Traverse Effect** — creating depth using `perspective`, `translateZ`, and `transform-style: preserve-3d`
+- **Background Attachment Fixed** — achieving a scrolling parallax effect on section images
+- **Layout & Debugging Skills** — inspecting elements, fixing overlap issues
 
-- **Z-Index & Stacking Context**
-  - How elements overlap
-  - How `z-index` works with positioned elements
-  - Common z-index mistakes and fixes
+---
 
-- **Parallax / Traverse Effect**
-  - Creating depth using movement
-  - Understanding how scroll and positioning affect layout
-  - Layering elements for visual effects
+## 🛠️ Tech Used
 
-- **Layout & Debugging Skills**
-  - Inspecting elements
-  - Fixing overlap issues
-  - Managing responsive behavior
+- HTML5
+- CSS3
 
+---
 
+## 📁 Project Structure
 
+```
+├── index.html
+├── index.css
+├── background.png
+├── foreground.png
+├── sport-1.jpg
+├── sport-2.jpg
+└── sport-3.jpg
+```
+
+---
+
+## ⚙️ How It Works
+
+- The `.warraper` has `perspective: 10px` which creates a 3D space for child elements.
+- `.background` and `.foreground` images are pushed back on the Z-axis using `translateZ` and scaled up to fill the screen — this creates the parallax depth effect.
+- Section background images use `background-attachment: fixed` to create a second layer of parallax as the user scrolls.
+
+---
+
+## 🏃 How to Run
+
+Open `index.html` directly in any browser. No setup needed.
+
+---
+
+## 📌 Note
+
+> `background-attachment: fixed` may not work on some mobile browsers due to rendering limitations.
